@@ -1,0 +1,381 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /*  */
+  text-decoration: none; /* Quiete las lineas debajo de los enlaces*/
+  list-style: none; /* Quitar las bolitas que aparecen en las listas*/
+}
+
+body {
+  background-color: #030303;
+  font-family: Bebas Neue, cursive;
+  color: #ffffff;
+}
+
+/*body{
+    background-color: $Fondo;
+    font-family: $Fuente;
+    color: $ColorLetra;
+}*/
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* /src/app/img/bg.jpg */
+.header {
+  background-image: url(../assets/img/bg.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover; /* cubre toda la seccion */
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+}
+
+/*.header {
+    background-image: $FondoImagen;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover; /* cubre toda la seccion */
+/*min-height: 70vh;
+    display: flex;
+    align-items: center;
+}*/
+.menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 35px;
+  color: #ffffff;
+}
+
+.menu .navbar ul li { /*Afecte lo que son las listas */
+  position: relative;
+  float: left; /* enlaces de manera horizontal*/
+}
+
+.menu .navbar ul li a {
+  font-size: 22px;
+  padding: 20px;
+  color: #ffffff;
+  display: block;
+}
+
+.menu .navbar ul li a:hover {
+  color: #ff2f28;
+}
+
+#menu { /*Ocultar el chech box*/
+  display: none;
+}
+
+.menu-icono {
+  width: 25px;
+}
+
+.menu label {
+  cursor: pointer;
+  display: none;
+}
+
+.header-content { /*contenido en fomra horizontal*/
+  display: flex;
+  width: 100%;
+}
+
+.header-1 {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  align-self: flex-end;
+}
+
+.header-1 img {
+  width: 300px;
+}
+
+.header-2 {
+  width: 50%;
+  margin-top: 80px;
+  text-align: end;
+}
+
+.header-2 h1 {
+  color: rgba(255, 255, 255, 0.4470588235);
+  font-size: 80px;
+  line-height: 80px;
+}
+
+.header-2 img {
+  width: 70px;
+}
+
+.btn-1 {
+  display: inline-block;
+  padding: 7px 20px;
+  background-color: #ff2f28;
+  color: #ffffff;
+  font-size: 20px;
+}
+
+.btn-2 {
+  width: 110px;
+  display: inline-block;
+  pad: 7px 20px;
+  background-color: #ff2f28;
+  font-size: 20px;
+  margin-top: 30px;
+  color: #ffffff;
+  text-align: center;
+}
+
+/*------------------------  Movies  ------------------*/
+.movies {
+  padding: 50px 0 0;
+  display: flex;
+  flex-direction: column;
+}
+.movies h2 {
+  font-size: 35px;
+  margin-bottom: 20px;
+}
+.movies hr {
+  border: 1px solid #ff2f28;
+  width: 50%;
+  margin-bottom: 40px;
+}
+.movies .box-container-1,
+.movies .box-container-2,
+.movies .box-container-3 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+}
+.movies .box-1,
+.movies .box-2,
+.movies .box-3 {
+  border-radius: 5px;
+  z-index: 4;
+  display: none;
+}
+.movies .box-1:nth-child(1),
+.movies .box-1:nth-child(2),
+.movies .box-1:nth-child(3),
+.movies .box-1:nth-child(4) {
+  display: inline-block;
+}
+.movies .box-2:nth-child(1),
+.movies .box-2:nth-child(2),
+.movies .box-2:nth-child(3),
+.movies .box-2:nth-child(4) {
+  display: inline-block;
+}
+.movies .box-3:nth-child(1),
+.movies .box-3:nth-child(2),
+.movies .box-3:nth-child(3),
+.movies .box-3:nth-child(4) {
+  display: inline-block;
+}
+.movies .load-more {
+  margin-top: 40px;
+  display: inline-block;
+  padding: 10px 25px;
+  border-radius: 15px;
+  border: 1px solid #ffffff;
+  color: #ff2f28;
+  font-size: 16px;
+  cursor: pointer;
+  align-self: flex-end;
+}
+.movies .load-more:hover {
+  background-color: #ff2f28;
+  color: #ffffff;
+}
+.movies .content {
+  color: #cfcfcf;
+  font-size: 20px;
+}
+.movies .content img {
+  width: 100%;
+  margin-bottom: 15px;
+}
+.movies .content img:hover {
+  transform: scale(1.1);
+}
+.movies .content h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 100px 0;
+  margin-top: 100px;
+  border-top: 1px solid rgba(255, 47, 40, 0.2392156863);
+}
+
+.footer ul {
+  display: flex;
+}
+
+.footer h3 {
+  font-size: 30px;
+}
+
+.footer a {
+  color: #cfcfcf;
+  font-size: 20px;
+  margin-right: 20px;
+  display: block;
+}
+
+.footer a:hover {
+  color: #ff2f28;
+}
+
+.comments {
+  background-color: #5c5959; /* Cambia el color de fondo a lo que prefieras */
+  padding: 20px;
+  border-radius: 10px; /* Agrega esquinas redondeadas */
+}
+
+
+/*------------------------  Css View ---------------*/
+.header-view {
+  background-image: url(../assets/img/1.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover; /* cubre toda la seccion */
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+}
+
+.header-view2 {
+  background-image: url(../assets/img/2.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover; /* cubre toda la seccion */
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+}
+
+.header-view3 {
+  background-image: url(../assets/img/3.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover; /* cubre toda la seccion */
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+}
+
+.header-view4 {
+  background-image: url(../assets/img/12.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover; /* cubre toda la seccion */
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+}
+
+.body-view {
+  margin-top: 28px;
+  margin: 0;
+  padding: 0;
+  background-color: #030303;
+  font-family: "Bebas Neue", cursive;
+  color: #ffffff;
+}
+
+.movie.container {
+  text-align: left; /* Centra el contenido horizontalmente */
+}
+
+.movie-content {
+  display: flex; /* Utiliza flexbox para la distribución */
+  justify-content: space-between; /* Distribuye el contenido a lo largo del eje principal (horizontal) */
+}
+
+.left-column, .right-column {
+  flex: 1; /* Ambas columnas se expandirán para ocupar el espacio disponible de manera equitativa */
+  padding: 20px;
+}
+
+/* Estilos para los comentarios y formulario */
+.comments, #comment-form {
+  text-align: left; /* Alinea los comentarios y el formulario a la izquierda */
+  padding: 20px;
+}
+
+#comment-text {
+  width: 100%;
+}
+
+/* Ajusta los estilos según tus preferencias */
+/* Ajusta los estilos según tus preferencias */
+/* Ajusta los estilos según tus preferencias */
+@media (max-width: 991px) {
+  .menu {
+    padding: 20px;
+  }
+  .menu label {
+    display: initial;
+  }
+  .menu .navbar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #030303;
+    display: none;
+  }
+  .menu .navbar ul li {
+    width: 100%;
+  }
+  .btn-1 {
+    display: none;
+  }
+  #menu:checked ~ .navbar {
+    display: initial;
+  }
+  .header-content {
+    flex-direction: column;
+    padding: 180px 30px 30px 30px;
+  }
+  .header-1 {
+    width: 100%;
+    align-items: center;
+  }
+  .header-2 {
+    width: 100%;
+    text-align: center;
+  }
+  .movies {
+    padding: 30px 80px;
+  }
+  .footer {
+    margin-top: 30px;
+    padding: 30px;
+    flex-direction: column;
+    text-align: center;
+  }
+  .footer ul {
+    margin-top: 15px;
+    justify-content: center;
+  }
+}/*# sourceMappingURL=style.css.map */
